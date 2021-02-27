@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse
 
 # Create your views here.
 def login(request):
-    return render(request,'adminLogin.html')
+    return render(request,'Admin/adminLogin.html')
 
 def trust_admin_login(request):
     if request.method =="POST":
@@ -14,9 +14,31 @@ def trust_admin_login(request):
                 "email":email,
                 "password":password
             }
-            return render(request,"Admin/adminHome.html",data)
+            return render(request,"admin_html/addimage.html",data)
         else:
-            return render(request,"adminLogin.html",{"msg":"Incorrect Details"})
+            return render(request,"Admin/adminLogin.html",{"msg":"Incorrect Details"})
 
     else:            
-        return render(request,"adminLogin.html",{"msg":"Please check serverside"})
+        return render(request,"Admin/adminLogin.html",{"msg":"Please check serverside"})
+
+
+def addimage(request):
+    return render(request,'admin_html/addimage.html')
+
+
+def addwhatwedo(request):
+    return render(request,'admin_html/addwhatwedo.html')
+
+def headingcontentimage(request):
+    return render(request,'admin_html/headingcontentimage.html')
+def managephotos(request):
+    return render(request,'admin_html/managephotos.html')
+def missionandvission(request):
+    return render(request,'admin_html/missionandvission.html')
+def frontimagechange(request):
+    return render(request,'admin_html/frontimagechange.html')
+def contactusform(request):
+    return render(request,'admin_html/contactusform.html')
+
+def listofwhatwedo(request):
+    return render(request,'admin_html/listofwhatwedo.html')
