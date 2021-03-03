@@ -15,22 +15,25 @@
       <div class="col-xl-12 mb-5 mb-xl-0">
         <div class="card  shadow" style="background-color: #7963E4;">
           <div class="card-header bg-transparent text-white text-center">
-              Add What we Do project Title and<span class="text-danger"> note your data next tab </span>
+              list of what we do and you can delete what we do
+              <p>{{msg}}</p>
           </div>
           <div class="card-body text-white">
            <div class="row">
              <div class="col text-center mx-5">
-              <form action="">
-                <div class="form-group  text-center">
-                  <label for=""></label>
-                  <input type="text" class="form-control-file" name="" id="" placeholder="Enter the new (what we Do) Name" aria-describedby="fileHelpId">
+              {% for i in selection %}
+              <div class="row">
+                <div class="col-8">
+                    <p style="font-size: 20px; font-weight: 800;">{{i.name}}</p>
                 </div>
-                <a name="" id="" type="submit" class="btn btn-white text-dark" >Submit</a>
-              </form>
+                <div class="col-4">
+                  <a name="" id="" class="btn btn-danger" href="{% url 'listdelete' %}?s={{i.id}}" role="button">delete</a>
+                </div>
+              </div>
+              {% endfor %}
+               
              </div>
            </div>
-           
-           
           </div>
         </div>
       </div>

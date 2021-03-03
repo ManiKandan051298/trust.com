@@ -17,15 +17,19 @@
           <div class="card-header bg-transparent text-white text-center">
 Arice Home image image changer
           </div>
+          <div class="card-header bg-transparent text-warning text-center">
+         {{msg}}
+                      </div>
           <div class="card-body text-white">
            <div class="row">
              <div class="col text-center mx-5">
-              <form action="">
+              <form action="{% url 'frontimage_sumbit' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="form-group  text-center">
                   <label for=""></label>
-                  <input type="file" class="form-control-file" name="" id="" placeholder="" aria-describedby="fileHelpId">
+                  <input type="file" required class="form-control-file" name="myfile" id="" placeholder="" aria-describedby="fileHelpId">
                 </div>
-                <a name="" id="" type="submit" class="btn btn-white text-dark" >Update</a>
+                <button name="" id="" type="submit" class="btn btn-white text-dark" >Update</button>
               </form>
              </div>
            </div>

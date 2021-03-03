@@ -17,15 +17,18 @@
           <div class="card-header bg-transparent text-white text-center">
               Add What we Do project Title and<span class="text-danger"> note your data next tab </span>
           </div>
+          <div class="card-header bg-transparent text-white text-center">
+{{msg}}        </div>
           <div class="card-body text-white">
            <div class="row">
              <div class="col text-center mx-5">
-              <form action="">
+              <form action="{%  url 'addwhatwedo_submit' %}" method="POST">
+                {% csrf_token %}
                 <div class="form-group  text-center">
                   <label for=""></label>
-                  <input type="text" class="form-control-file" name="" id="" placeholder="Enter the new (what we Do) Name" aria-describedby="fileHelpId">
+                  <input type="text" required class="form-control-file" name="name" id="" placeholder="Enter the new (what we Do) Name" aria-describedby="fileHelpId">
                 </div>
-                <a name="" id="" type="submit" class="btn btn-white text-dark" >Submit</a>
+                <button name="" id="" type="submit" class="btn btn-white text-dark" >Submit</button>
               </form>
              </div>
            </div>

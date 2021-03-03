@@ -12,6 +12,10 @@
 
     <div class="row ">
       <div class="col-xl-12 mb-5 mb-xl-0">
+
+        <div class="text-center text-warning">
+{{msg}}
+        </div>
         <div class="card  shadow" style="background-color: #7963E4;">
           <div class="card-header bg-transparent text-white text-center">
 Contact Us FORM
@@ -19,25 +23,25 @@ Contact Us FORM
           <div class="card-body text-white">
            <div class="row text-center">
              <div class="col text-center mx-5">
-              <form action="">
-                  
+              <form action="{% url 'contactusform_sumbit' %}" method="POST">
+                {% csrf_token %}
                 <div class="form-group  text-center">
                   <label for=""></label>
-                  <input type="text" class="form-control-file" name="" id="" placeholder="address" aria-describedby="fileHelpId">
+                  <input type="text" required class="form-control-file" name="trustAddress" id="" placeholder="address" aria-describedby="fileHelpId">
                 </div>
                 <div class="form-group  text-center">
                   <label for=""></label>
-                  <input type="text" class="form-control-file" name="" id="" placeholder="phonenumber" aria-describedby="fileHelpId">
+                  <input type="text" required class="form-control-file" name="trustPhonenumber" id="" placeholder="phonenumber" aria-describedby="fileHelpId">
                 </div>
                 <div class="form-group  text-center">
                   <label for=""></label>
-                  <input type="email" class="form-control-file" name="" id="" placeholder="Mail Address" aria-describedby="fileHelpId">
+                  <input type="email" required class="form-control-file" required name="trustMail" id="" placeholder="Mail Address" aria-describedby="fileHelpId">
                 </div>
                 <div class="form-group  text-center">
                   <label for=""></label>
-                  <input type="text" class="form-control-file" name="" id="" placeholder="org" aria-describedby="fileHelpId">
+                  <input type="text" required class="form-control-file" name="trustOrg" id="" placeholder="org" aria-describedby="fileHelpId">
                 </div>
-                <a name="" id="" type="submit" class="btn btn-white text-dark" >Submit</a>
+                <button type="submit" class="btn btn-white text-dark" >Submit</button>
               </form>
              </div>
            </div>
@@ -52,4 +56,10 @@ Contact Us FORM
 {% endblock content %}
 
 <!-- Specific JS goes HERE --> 
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+
+  
+  </script>
+
+{% endblock javascripts %}
