@@ -30,24 +30,13 @@
               <i class="material-icons">apps</i> Our Services
             </a>
             <div class="dropdown-menu dropdown-with-icons">
+              {% for i in selection %}
               <a href="" class="dropdown-item">
- Free Education Services
+               {{i.name}}
               </a>
-              <a href="" class="dropdown-item">
-                 Food Feeding Center
-              </a>
-              <a href="" class="dropdown-item">
-                 Skill Development Services for woman
-              </a>
-              <a href="" class="dropdown-item">
-                Medical Services
-              </a>
-              <a href="" class="dropdown-item">
-                 Helping Hands
-              </a>
-              <a href="" class="dropdown-item">
-                 Caring Nature
-              </a>
+              {% endfor %}
+            
+              
             </div>
           </li>
         

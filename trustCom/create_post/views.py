@@ -43,7 +43,8 @@ def managephotos(request):
 def frontimagechange(request):
     return render(request,'admin_html/frontimagechange.html')
 def contactusform(request):
-    return render(request,'admin_html/contactusform.html')
+    contact=Contactdetails.objects.get(pk=1)
+    return render(request,'admin_html/contactusform.html',{"contact":contact})
 
 def listofwhatwedo(request):
     selection=Whatwedo.objects.all()

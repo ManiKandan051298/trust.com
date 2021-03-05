@@ -43,6 +43,144 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* Extra small devices (phones, 600px and down) */
+
+
+
+
+@media screen and (min-width: 200px) and (max-width: 279px) {
+    .missionandvisionimage{
+      height: 100px  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 9px !important ;
+      margin-left: -20px;
+      margin-top: -10px;
+
+    }
+    .user_heading{
+      font-weight: 200;
+      font-size: 20px !important; 
+      color:#6C4599;
+      margin-top: 30px  !important;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 400px) {
+    .missionandvisionimage{
+      height: 150px  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 13px !important;
+      margin-left: -20px;
+      margin-top: -10px;
+    }
+    .user_heading{
+      font-size: 20px !important; 
+
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 50px  !important;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 474px) {
+    .missionandvisionimage{
+      height: 220px  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 15px !important;
+      margin-left: -20px;
+      margin-top: -10px;
+    }
+    .user_heading{
+      font-size: 20px !important; 
+
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 50px  !important;
+    }
+}
+
+
+
+@media screen and (min-width: 475px) and (max-width: 720px) {
+    .missionandvisionimage{
+      height: 280px  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 25px !important;
+    }
+    .user_heading{
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 100px  !important;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+    .missionandvisionimage{
+      height: 380px  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 25px !important;
+    }
+    .user_heading{
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 100px  !important;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .missionandvisionimage{
+      height: auto  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 25px !important;
+    }
+    .user_heading{
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 100px  !important;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .missionandvisionimage{
+      height: auto  !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 25px !important;
+    }
+    .user_heading{
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 100px  !important;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .missionandvisionimage{
+      height:  auto !important;
+      width: auto !important;
+    }
+    .user_text{
+      font-size: 25px !important;
+    }
+    .user_heading{
+      font-weight: 900; 
+      color:#6C4599;
+      margin-top: 100px  !important;
+    }
+}
   </style>
 {% endblock stylesheets %}
 
@@ -55,38 +193,38 @@
       <div class="container">
 
         <div class="  text-center" >
-          <img src="{% static 'user/img/abovemission.jpg' %}" style="border-radius: 30px;" alt="">
+          <img src="{% static 'user/img/abovemission.jpg' %}" class='missionandvisionimage' style="border-radius: 30px;" alt="">
         </div>
 
-        <div class="missionandvission mt-5 pt-5" style="margin-top: 100px !important;" >
-          <h2 class="text-center" style="font-weight: 900; color:#6C4599;">Mission and Vision</h2>
+        <div class="missionandvission ">
+          <h2 class="text-center user_heading" >Mission and Vision</h2>
         </div>
-        <div class="mx-5 mt-4">
+        <div class=" mt-4">
           <ul>
-            <li class="mt-3 text-justify" style="font-size: 25px;">
+            <li class="mt-3 text-justify user_text" >
             To Work with Communities to make them believe every Individual the Social Rights and provide access to the resource and opportunities in order to LIVE, Grow with Self-Esteem and Contribute for the better safe and healthy Poverty less Society.
               </li>
            
             </ul>
         </div>
 
-        <div class="aboutus mt-5 pt-5" id="aboutus">
-          <h2 class="text-center" style="font-weight: 900; color:#6C4599;">About Us</h2>
+        <div class="aboutus" id="aboutus">
+          <h2 class="text-center user_heading">About Us</h2>
         </div>
-        <div class="mx-5 mt-4">
+        <div class="">
           <ul  style="font-size: 25px;">
-            <li class="mt-4 text-justify"><b>ARISE (ASSOCIATION OF RURAL INFRA SERVICES AND EDUCATION)</b> which means to STAND UP for the empowerment of society, founded in 2017, is an NGO in India registered as a Non-Profitable Organisation/ trust in Malli, Srivilliputhur, Tamil Nadu.
+            <li class="mt-4 text-justify user_text"><b>ARISE (ASSOCIATION OF RURAL INFRA SERVICES AND EDUCATION)</b> which means to STAND UP for the empowerment of society, founded in 2017, is an NGO in India registered as a Non-Profitable Organisation/ trust in Malli, Srivilliputhur, Tamil Nadu.
               </li>
-              <li class="mt-4 text-justify">
+              <li class="mt-4 text-justify user_text">
                 <b>ARISE</b> closely works with the vulnerable communities and empowers the socially marginalized by providing them livelihood linkages, imparting skills leading to employment, health and education facilities. The focus areas of ARISE are livelihoods, skill development, health and education, rights, green environment, rehabilitation and resettlement and other community development initiatives.
               </li>
-              <li class="mt-4 text-justify">
+              <li class="mt-4 text-justify user_text">
                 <b>ARISE</b> began as a Charitable Trust that pioneered in rejuvenating underprivileged and vulnerable neighborhoods into self-sustaining and developed communities by its Integrated Community Development Programes changing the environment of the neighborhood. ARISE supports to the underdeveloped to obtain government identities, providing them access to public benefit schemes, imparting skills leading to employment, providing access to habitable environment and basic education
               </li>
-              <li class="mt-4 text-justify">
+              <li class="mt-4 text-justify user_text">
                 Over the years, <b>ARISE</b> has partnered with various entities – individuals and other NGO/NPOs for several undertakings of greater good. In the last 3 years ARISE has rendered it services to several villages, children, women, youth and vulnerable people in Virudhunagar District, Tamil Nadu, touched the lives of more than 10000 individuals.
               </li>
-              <li class="mt-4 pb-3 text-justify">
+              <li class="mt-4 pb-3 text-justify user_text">
               
 As <b>ARISE</b> marches forward with its partners in its journey towards uplifting the marginalized, it keeps on expanding its horizon of the communities it serves. In this journey, ARISE has received several accolades for its programs, internal systems, organizational ethics, best practices.
               </li>
@@ -94,8 +232,8 @@ As <b>ARISE</b> marches forward with its partners in its journey towards uplifti
             <hr>
         </div>
 
-        <div class="missionandvission mt-5" style="margin-top: 100px !important;" >
-          <h2 class="text-center" style="font-weight: 900; color:#6C4599;">Our Services</h2>
+        <div class="missionandvission mt-5"  >
+          <h2 class="text-center user_heading">Our Services</h2>
         </div>
 
         <div class="" >

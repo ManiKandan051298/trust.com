@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from create_post.models import Contactdetails
+from create_post.models import Contactdetails,Whatwedo,Addimage
 # Create your views here.
 
 class basic_details:
@@ -13,12 +13,14 @@ class basic_details:
 
 def index(request):
     b=basic_details()
+    selection=Whatwedo.objects.all()
     data={
         "trustMail":b.trustMail,
         "trustAddress":b.trustAddress,
         "trustOrg":b.trustOrg,
         "trustPhonenumber":b.trustPhonenumber,
         "trustFrontimage":b.trustFrontimage,
+        "selection":selection,
     }
     return render(request,"index/index.html",data)
 
