@@ -1,0 +1,13 @@
+cd trustCom
+
+open terminal 
+
+type pip install -r requirements.txt 
+
+and type
+
+py manage.py makemigrations(or) python manage.py makemigrations
+
+py manage.py migrate (or) python manage.py migrate
+
+py manage.py runserver(or) python manage.py runserver
