@@ -20,11 +20,7 @@
               <i class="material-icons">home</i> Home
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#aboutus" >
-              <i class="material-icons">supervisor_account</i> AboutUs
-            </a>
-          </li>
+       
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <i class="material-icons">apps</i> Our Services
@@ -32,6 +28,7 @@
             <div class="dropdown-menu dropdown-with-icons">
               {% for i in selection %}
               <a href="{% url 'detailswhatwedo' %}?search={{i.name}}&s={{i.id}}" class="dropdown-item">
+
                {{i.name}}
               </a>
               {% endfor %}
@@ -45,32 +42,17 @@
               <i class="material-icons">chat_bubble</i> ReachUS
             </a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
-              <i class="fa fa-facebook-square"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </li> -->
+     
         </ul>
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url( '{{trustFrontimage}}');">
+  <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url( '{{frontimage}}');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <h1 class="text-center title_heading" >ARISE</h1>
-            <h3 class="title_text">ASSOCIATION OF RURAL INFRA SERVICES AND EDUCATION</h3>
+            <h1 class="text-center title_heading" >{{heading}}</h1>
           </div>
         </div>
       </div>

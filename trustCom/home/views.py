@@ -24,5 +24,29 @@ def index(request):
     }
     return render(request,"index/index.html",data)
 
-def about(request):
-    return render(request,"about/about.html")
+def detailswhatwedo(request):
+    b=basic_details()
+    search=request.GET.get('search')
+    s=request.GET.get('s')
+    selection=Whatwedo.objects.all().exclude(pk=s)
+    value=Whatwedo.objects.get(pk=s)
+    images=Addimage.objects.filter(projectid=s)
+    data={
+        "trustMail":b.trustMail,
+        "trustAddress":b.trustAddress,
+        "trustOrg":b.trustOrg,
+        "trustPhonenumber":b.trustPhonenumber,
+        "trustFrontimage":b.trustFrontimage,
+        "selection":selection,
+        "heading":value.name,
+        "content":value.content,
+        "frontimage":value.image,
+        "images":images,
+    }
+    return render(request,"index/detailswhatwedo.html",data)
+
+def sample2(request):
+    search=request.GET.get('search')
+    s=request.GET.get('s')
+    
+    return HttpResponse(search+""+str(s))
