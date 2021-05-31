@@ -25,7 +25,5 @@ urlpatterns = [
     path('headingcontentimage_submit/',views.headingcontentimage_submit,name="headingcontentimage_submit"),
     path('listdelete/',views.listdelete,name="listdelete"),
     path('imagedelete/',views.imagedelete,name="imagedelete"),
-
-
 ]
 

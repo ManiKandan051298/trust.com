@@ -122,12 +122,13 @@ def imagedelete(request):
 def sample(request):
     if request.method == 'POST' and request.FILES['myfile']:
         select=request.POST.get('select')
+        date=request.POST.get('date')
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
         selection=Whatwedo.objects.all()
-        p=Addimage(projectid=select,image=uploaded_file_url)
+        p=Addimage(projectid=select,image=uploaded_file_url,date=date)
         p.save()
         return render(request,'admin_html/addimage.html',{"msg":"Updated Success fully!!","selection":selection})  
     return HttpResponse("error")

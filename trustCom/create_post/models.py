@@ -8,7 +8,6 @@ class Contactdetails(models.Model):
     trustPhonenumber = models.CharField(max_length=100)
     trustFrontimage = models.ImageField(upload_to='frontImage')
 
-
 class Whatwedo(models.Model):
     name = models.CharField(max_length=100)
     content = models.CharField(max_length=100)
@@ -16,4 +15,5 @@ class Whatwedo(models.Model):
 
 class Addimage(models.Model):
     projectid = models.IntegerField()
+    date=models.CharField(max_length=100)
     image = models.ImageField(upload_to='frontImage')
